@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background">
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/button_toggle_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:checkedButton="@id/button_today"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_today"
+            style="?attr/materialButtonToggleGroupStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/home_button_state"
+            android:text="@string/today"
+            app:cornerRadius="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_week"
+            style="?attr/materialButtonToggleGroupStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/home_button_state"
+            android:text="@string/week"
+            app:cornerRadius="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_month"
+            style="?attr/materialButtonToggleGroupStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/home_button_state"
+            android:text="@string/month"
+            app:cornerRadius="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_year"
+            style="?attr/materialButtonToggleGroupStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/home_button_state"
+            android:text="@string/year"
+            app:cornerRadius="0dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_custom"
+            style="?attr/materialButtonToggleGroupStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/home_button_state"
+            app:cornerRadius="0dp"
+            app:icon="@drawable/ic_custom_calendar"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_toggle_group"
+        tools:text="29 Jul 2020" />
+
+    <LinearLayout
+        android:id="@+id/layout_bets_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="@color/news_background"
+        android:elevation="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date">
+
+        <TextView
+            android:id="@+id/text_bets_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="Bets made: 4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_bets_win"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/news_background"
+        android:elevation="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_bets_total">
+
+        <TextView
+            android:id="@+id/text_bets_win"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="Won: 3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_bets_lost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/news_background"
+        android:elevation="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_bets_win">
+
+        <TextView
+            android:id="@+id/text_bets_lost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="Lost: 2" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_earned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="33dp"
+        android:text="@string/virtual_money_earned"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_bets_lost" />
+
+    <TextView
+        android:id="@+id/text_earned_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/won_status"
+        android:paddingStart="8dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="8dp"
+        android:layout_marginStart="10sp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_earned"
+        app:layout_constraintStart_toEndOf="@+id/tv_earned"
+        app:layout_constraintTop_toTopOf="@+id/tv_earned"
+        tools:text="-$10" />
+
+    <TextView
+        android:id="@+id/tv_lost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="23dp"
+        android:text="@string/virtual_money_lost"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_earned" />
+
+
+    <TextView
+        android:id="@+id/text_lost_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red"
+        android:paddingStart="8dp"
+        android:paddingTop="3dp"
+        android:paddingEnd="8dp"
+        android:layout_marginStart="10sp"
+        android:paddingBottom="3dp"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_lost"
+        app:layout_constraintStart_toEndOf="@+id/tv_lost"
+        app:layout_constraintTop_toTopOf="@+id/tv_lost"
+        tools:text="-$10" />
+</androidx.constraintlayout.widget.ConstraintLayout>

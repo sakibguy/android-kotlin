@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Sport 365</string>
+    <string name="bets">Bets</string>
+    <string name="calendar">Calendar</string>
+    <string name="news">News</string>
+    <string name="stats">Stats</string>
+    <string name="won">Won</string>
+    <string name="lost">Lost</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="football">Football</string>
+    <string name="hockey">Hockey</string>
+    <string name="basketball">Basketball</string>
+    <string name="tennis">Tennies</string>
+    <string name="live">LIVE</string>
+    <string name="upcoming">UPCOMING</string>
+    <string name="time">Time</string>
+    <string name="more_stats">More stats</string>
+    <string name="make_a_bet">Make a bet</string>
+    <string name="today">TODAY</string>
+    <string name="week">WEEK</string>
+    <string name="month">MONTH</string>
+    <string name="year">YEAR</string>
+    <string name="virtual_money_earned">Virtual money earned:</string>
+    <string name="virtual_money_lost">Virtual money lost:</string>
+    <string name="bets_made_size">Bets made: %d</string>
+    <string name="won_size">Won: %d</string>
+    <string name="lost_size">Lost: %d</string>
+    <string name="lost_amount">-$%d</string>
+    <string name="won_amount">+$%d</string>
+</resources>
