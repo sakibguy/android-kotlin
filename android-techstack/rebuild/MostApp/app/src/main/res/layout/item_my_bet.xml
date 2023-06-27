@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#505050"
+    app:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@color/news_background"
+            android:elevation="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                tools:text="29 June 2022\n09:00 am" />
+
+            <TextView
+                android:id="@+id/text_league_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="Major League Soccer" />
+        </RelativeLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_home_team"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:src="@color/white"
+            app:civ_border_color="@color/light_green"
+            app:civ_border_width="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+        <TextView
+            android:id="@+id/text_home_team"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textAlignment="viewStart"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_home_team"
+            app:layout_constraintEnd_toStartOf="@+id/text_score"
+            app:layout_constraintStart_toEndOf="@+id/iv_home_team"
+            app:layout_constraintTop_toTopOf="@+id/iv_home_team"
+            tools:text="Chelsea" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_away_team"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="15dp"
+            app:civ_border_color="@color/light_green"
+            app:civ_border_width="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+            tools:src="@drawable/away_team" />
+
+        <TextView
+            android:id="@+id/text_away_team"
+            android:layout_width="0dp"
+            android:textAlignment="textEnd"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_away_team"
+            app:layout_constraintEnd_toStartOf="@+id/iv_away_team"
+            app:layout_constraintStart_toEndOf="@+id/text_score"
+            app:layout_constraintTop_toTopOf="@+id/iv_away_team"
+            tools:text="Bayern Munich" />
+
+        <TextView
+            android:id="@+id/text_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/primary_yellow"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+            tools:text="1:0" />
+
+        <TextView
+            android:id="@+id/text_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/primary_dark_gray"
+            android:paddingStart="8dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/text_score"
+            app:layout_constraintStart_toStartOf="@+id/text_score"
+            app:layout_constraintTop_toBottomOf="@+id/text_score"
+            tools:text="-$10" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

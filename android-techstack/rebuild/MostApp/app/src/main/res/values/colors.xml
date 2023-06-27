@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_yellow">#FFDF1A</color>
+    <color name="primary_light_gray">#E1E1E1</color>
+    <color name="primary_dark_gray">#272727</color>
+    <color name="primaryColor">#363636</color>
+    <color name="primaryLightColor">#606060</color>
+    <color name="primaryDarkColor">#131313</color>
+    <color name="dark_green">#146E51</color>
+    <color name="light_green">#009F6C</color>
+    <color name="new_title_green">#43FFC3</color>
+    <color name="main_background">#353535</color>
+    <color name="news_background">#585858</color>
+    <color name="red">#C63E20</color>
+    <color name="state_checked_color">#146E51</color>
+    <color name="state_unchecked_color">#05835A</color>
+    <color name="yellow_card">#F0D905</color>
+    <color name="won_status">#B2E05D</color>
+
+</resources>
+

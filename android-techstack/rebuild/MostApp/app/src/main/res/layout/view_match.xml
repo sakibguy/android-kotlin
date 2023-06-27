@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="109dp"
+        app:cardBackgroundColor="#68BDA2"
+        android:layout_height="137dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_team"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginTop="20dp"
+                android:src="@color/white"
+                app:civ_border_color="@color/light_green"
+                app:civ_border_width="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="8dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/red"
+                app:layout_constraintEnd_toStartOf="@+id/tv_red_Card"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_team" />
+
+            <TextView
+                android:id="@+id/tv_red_Card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view"
+                app:layout_constraintEnd_toStartOf="@+id/view2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/view"
+                app:layout_constraintTop_toTopOf="@+id/view"
+                tools:text="0" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="8dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="4dp"
+                android:background="@color/yellow_card"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_red_Card"
+                app:layout_constraintEnd_toStartOf="@+id/tv_yellow_card"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_red_Card"
+                app:layout_constraintTop_toTopOf="@+id/tv_red_Card" />
+
+
+            <TextView
+                android:id="@+id/tv_yellow_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                tools:text="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

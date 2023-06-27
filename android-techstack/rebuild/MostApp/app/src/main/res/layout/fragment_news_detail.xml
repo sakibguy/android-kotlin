@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.news.detail.NewsDetailFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/main_background"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/iv_news"
+            android:layout_width="match_parent"
+            android:layout_height="216dp"
+            android:scaleType="fitXY"
+            tools:src="@drawable/placeholder" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_news"
+            android:layout_margin="15dp"
+            android:textColor="@color/new_title_green"
+            android:textSize="16sp"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/text_description"
+            android:layout_width="match_parent"
+            android:layout_below="@id/text_title"
+            android:layout_alignStart="@id/text_title"
+            android:layout_alignEnd="@id/text_title"
+            tools:text="Description"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
